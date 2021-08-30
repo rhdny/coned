@@ -117,7 +117,7 @@ class Meter(object):
         browser_launch_config = {
             "defaultViewport": {"width": 1920, "height": 1080},
             "dumpio": True,
-            "args": ["--no-sandbox"]}
+            "args": ["--enable-webgl --no-sandbox --disable-dev-shm-usage"]}
         if self.browser_path is not None:
             browser_launch_config['executablePath'] = self.browser_path
         _LOGGER.debug("browser_launch_config = %s", browser_launch_config)
